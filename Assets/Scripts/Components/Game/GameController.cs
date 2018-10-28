@@ -15,6 +15,7 @@ public class GameController : MonoBehaviour
     private FuelTank tank;
     private Health health;
     private float initialPlayerPos;
+    private int enemiesDestroyed = 0;
 
     public static GameController Instance
     {
@@ -53,11 +54,16 @@ public class GameController : MonoBehaviour
         gameOverPlate.SetActive(true);
 
         var distance = player.transform.position.x - initialPlayerPos;
-        gameOverText.text = string.Format("Game over!\nDistance: {0}", distance);
+        gameOverText.text = string.Format("Game over!\nDistance: {0}\nEnemies destroyed: {1}", distance, enemiesDestroyed);
     }
 
     public bool IsGameActive()
     {
         return !gameOverPlate.activeSelf;
+    }
+
+    public void OnEnemyDestroyed()
+    {
+        enemiesDestroyed++;
     }
 }

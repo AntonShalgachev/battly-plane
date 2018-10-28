@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 4921521238574760}
   - component: {fileID: 212382582204407864}
   - component: {fileID: 50692835823762152}
+  - component: {fileID: 114529187990390886}
   m_Layer: 0
   m_Name: FlyingMine
   m_TagString: Untagged
@@ -190,6 +191,17 @@ MonoBehaviour:
   explosionPrefab: {fileID: 1260974751388192, guid: 8df750d44a8402c4086e41971606d8d9,
     type: 2}
   explosionScale: 2
+--- !u!114 &114529187990390886
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1984412726570196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d460e6aad44499943d77a1dd5e01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114649808734907082
 MonoBehaviour:
   m_ObjectHideFlags: 1
