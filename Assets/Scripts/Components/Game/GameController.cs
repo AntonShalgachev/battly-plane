@@ -16,6 +16,12 @@ public class GameController : MonoBehaviour
     private Health health;
     private float initialPlayerPos;
 
+    public static GameController Instance
+    {
+        get;
+        private set;
+    }
+
     private void Awake()
     {
         tank = player.GetComponent<FuelTank>();
@@ -23,6 +29,9 @@ public class GameController : MonoBehaviour
         gameOverPlate.SetActive(false);
 
         initialPlayerPos = player.transform.position.x;
+
+        Debug.Assert(Instance == null);
+        Instance = this;
     }
 
     private void Update()
@@ -45,5 +54,10 @@ public class GameController : MonoBehaviour
 
         var distance = player.transform.position.x - initialPlayerPos;
         gameOverText.text = string.Format("Game over!\nDistance: {0}", distance);
+    }
+
+    public bool IsGameActive()
+    {
+        return !gameOverPlate.activeSelf;
     }
 }

@@ -18,6 +18,9 @@ public class BombDropper : MonoBehaviour
 
     private void Update()
     {
+        if (!GameController.Instance.IsGameActive())
+            return;
+
         if (Input.GetKeyDown(KeyCode.Return))
             DropBomb();
     }

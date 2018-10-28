@@ -24,6 +24,9 @@ public class ForwardThruster : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (!GameController.Instance.IsGameActive())
+            return;
+
         var speed = body.velocity.x;
         var force = Mathf.Min(relativeForce * (targetSpeed - speed), maxForce);
 

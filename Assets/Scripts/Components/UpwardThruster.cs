@@ -35,6 +35,9 @@ public class UpwardThruster : MonoBehaviour
         if (tank.IsEmpty())
             return;
 
+        if (!GameController.Instance.IsGameActive())
+            return;
+
         if ((Input.GetMouseButton(0) || Input.GetKey(KeyCode.Space)) && body.velocity.y <= maxSpeed)
         {
             body.AddForce(new Vector2(0.0f, upwardForce));

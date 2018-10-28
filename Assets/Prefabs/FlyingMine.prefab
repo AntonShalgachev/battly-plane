@@ -185,10 +185,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
+  removeSelf: 0
   parentToRemove: {fileID: 1984412726570196}
   explosionPrefab: {fileID: 1260974751388192, guid: 8df750d44a8402c4086e41971606d8d9,
     type: 2}
-  explosionScale: 3
+  explosionScale: 2
 --- !u!114 &114649808734907082
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,7 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77ce820324416f34a95bd2254a480700, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 30
+  damage: 50
+  removeSelf: 0
   parentToRemove: {fileID: 1984412726570196}
   explosionPrefab: {fileID: 1260974751388192, guid: 8df750d44a8402c4086e41971606d8d9,
     type: 2}
